@@ -69,7 +69,7 @@ jobs:
       if: (!cancelled())
       uses: ophub/flippy-openwrt-actions@main
       env:
-        OPENWRT_ARMVIRT: https://github.com/breakings/OpenWrt/releases/download/ARMv8_ROOTFS/openwrt-armvirt-64-default-rootfs.tar.gz
+        OPENWRT_ARMVIRT: https://github.com/hublj/op/releases/download/openwrt_s9xxx_2021.11.16.0501/openwrt-armvirt-64-default-rootfs.tar.gz
         PACKAGE_SOC: beikeyun_l1pro_s905d_s905x2_s905x3_s912_s922x_s922x-n2_vplus
         WHOAMI: breakings
         KERNEL_REPO_URL: https://github.com/breakings/OpenWrt/tree/main/opt/kernel
@@ -103,7 +103,7 @@ jobs:
         token: ${{ secrets.RELEASES_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         body: |
-          默认IP：192.168.1.1 默认密码：password (WiFi密码同）
+          默认IP：192.168.1.201 默认密码：password (WiFi密码同）
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
